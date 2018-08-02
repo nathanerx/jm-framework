@@ -1,0 +1,33 @@
+@import './variables';
+
+.#{$prefix-component}btn {
+  border-width: $button-border-width;
+  border-style: solid;
+  border-radius: $button-border-radius;
+  padding: 1rem;
+  cursor: pointer;
+
+  &-block {
+    width:100%;
+  }
+
+  &-primary {
+    background-color: $primary;
+    border-color: $primary-dark;
+
+    &:hover {
+      background-color: $primary-light;
+      border-color: $primary;
+    }
+  }
+
+  &-secondary {
+    background-color: $secondary;
+    border-color: $secondary-dark;
+
+    &:hover {
+      background-color: $secondary-light;
+      border-color: $secondary;
+    }
+  }
+}

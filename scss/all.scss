@@ -1,0 +1,14 @@
+@import './variables';
+@import './mixins';
+
+@import './utils';
+
+@import './buttons';
+
+html {
+  font-size: $font-base;
+}
+
+body {
+  font-size: 2rem; // 16px
+}

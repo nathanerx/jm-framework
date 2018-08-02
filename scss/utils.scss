@@ -1,0 +1,24 @@
+@import './variables';
+
+@for $i from 0 through 4 {
+  .#{$prefix-component}pa-#{$i} { padding:#{$i}rem; }
+  .#{$prefix-component}px-#{$i} { padding-left:#{$i}rem; padding-right:#{$i}rem; }
+  .#{$prefix-component}py-#{$i} { padding-top:#{$i}rem; padding-bottom:#{$i}rem; }
+  .#{$prefix-component}pt-#{$i} { padding-top:#{$i}rem; }
+  .#{$prefix-component}pr-#{$i} { padding-right:#{$i}rem; }
+  .#{$prefix-component}pb-#{$i} { padding-bottom:#{$i}rem; }
+  .#{$prefix-component}pl-#{$i} { padding-left:#{$i}rem; }
+
+  .#{$prefix-component}ma-#{$i} { margin:#{$i}rem; }
+  .#{$prefix-component}mx-#{$i} { margin-left:#{$i}rem; margin-right:#{$i}rem; }
+  .#{$prefix-component}my-#{$i} { margin-top:#{$i}rem; margin-bottom:#{$i}rem; }
+  .#{$prefix-component}mt-#{$i} { margin-top:#{$i}rem; }
+  .#{$prefix-component}mr-#{$i} { margin-right:#{$i}rem; }
+  .#{$prefix-component}mb-#{$i} { margin-bottom:#{$i}rem; }
+  .#{$prefix-component}ml-#{$i} { margin-left:#{$i}rem; }
+}
+
+.#{$prefix-component}text-left { text-align: left; }
+.#{$prefix-component}text-right { text-align: right; }
+.#{$prefix-component}text-center { text-align: center; }
+.#{$prefix-component}text-justify { text-align: justify; }
