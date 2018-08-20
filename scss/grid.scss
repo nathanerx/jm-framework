@@ -1,0 +1,29 @@
+@import './variables';
+
+.#{$prefix-component}container {
+    padding-left:$gutter-grid / 2;
+    padding-right:$gutter-grid / 2;
+}
+
+.#{$prefix-component}row {
+    display:flex;
+    flex-wrap:wrap;
+    margin-left:$gutter-grid / -2;
+    margin-right:$gutter-grid / -2;
+
+    &-column {
+        flex-direction:column
+    }
+}
+
+[class*="#{$prefix-component}col-"] {
+    box-sizing:border-box;
+    padding-left:$gutter-grid / 2;
+    padding-right:$gutter-grid / 2;
+}
+
+@for $i from 0 through 12 {
+    .#{$prefix-component}col-#{$i} {
+        width: $i * 100% / 12;
+    }
+}

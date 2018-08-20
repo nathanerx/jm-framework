@@ -1,24 +1,57 @@
 @import './variables';
+@import './mixins';
 
 @for $i from 0 through 4 {
-  .#{$prefix-component}pa-#{$i} { padding:#{$i}rem; }
-  .#{$prefix-component}px-#{$i} { padding-left:#{$i}rem; padding-right:#{$i}rem; }
-  .#{$prefix-component}py-#{$i} { padding-top:#{$i}rem; padding-bottom:#{$i}rem; }
-  .#{$prefix-component}pt-#{$i} { padding-top:#{$i}rem; }
-  .#{$prefix-component}pr-#{$i} { padding-right:#{$i}rem; }
-  .#{$prefix-component}pb-#{$i} { padding-bottom:#{$i}rem; }
-  .#{$prefix-component}pl-#{$i} { padding-left:#{$i}rem; }
+  .#{$prefix-component}pa-#{$i} { padding:$i * 1rem; }
+  .#{$prefix-component}px-#{$i} { padding-left:$i * 1rem; padding-right:$i * 1rem; }
+  .#{$prefix-component}py-#{$i} { padding-top:$i * 1rem; padding-bottom:$i * 1rem; }
+  .#{$prefix-component}pt-#{$i} { padding-top:$i * 1rem; }
+  .#{$prefix-component}pr-#{$i} { padding-right:$i * 1rem; }
+  .#{$prefix-component}pb-#{$i} { padding-bottom:$i * 1rem; }
+  .#{$prefix-component}pl-#{$i} { padding-left:$i * 1rem; }
 
-  .#{$prefix-component}ma-#{$i} { margin:#{$i}rem; }
-  .#{$prefix-component}mx-#{$i} { margin-left:#{$i}rem; margin-right:#{$i}rem; }
-  .#{$prefix-component}my-#{$i} { margin-top:#{$i}rem; margin-bottom:#{$i}rem; }
-  .#{$prefix-component}mt-#{$i} { margin-top:#{$i}rem; }
-  .#{$prefix-component}mr-#{$i} { margin-right:#{$i}rem; }
-  .#{$prefix-component}mb-#{$i} { margin-bottom:#{$i}rem; }
-  .#{$prefix-component}ml-#{$i} { margin-left:#{$i}rem; }
+  .#{$prefix-component}ma-#{$i} { margin:$i * 1rem; }
+  .#{$prefix-component}mx-#{$i} { margin-left:$i * 1rem; margin-right:$i * 1rem; }
+  .#{$prefix-component}my-#{$i} { margin-top:$i * 1rem; margin-bottom:$i * 1rem; }
+  .#{$prefix-component}mt-#{$i} { margin-top:$i * 1rem; }
+  .#{$prefix-component}mr-#{$i} { margin-right:$i * 1rem; }
+  .#{$prefix-component}mb-#{$i} { margin-bottom:$i * 1rem; }
+  .#{$prefix-component}ml-#{$i} { margin-left:$i * 1rem; }
 }
 
-.#{$prefix-component}text-left { text-align: left; }
-.#{$prefix-component}text-right { text-align: right; }
-.#{$prefix-component}text-center { text-align: center; }
+.#{$prefix-component}text-left    { text-align: left; }
+.#{$prefix-component}text-right   { text-align: right; }
+.#{$prefix-component}text-center  { text-align: center; }
 .#{$prefix-component}text-justify { text-align: justify; }
+
+.#{$prefix-component}d-block      { display: block; }
+.#{$prefix-component}d-inline     { display: inline; }
+.#{$prefix-component}d-inblock    { display: inline-block; }
+.#{$prefix-component}d-flex       { display: flex; }
+.#{$prefix-component}d-table      { display: table; }
+.#{$prefix-component}d-table-cell { display: table-cell; }
+.#{$prefix-component}d-table-row  { display: table-row; }
+
+.#{$prefix-component}clearfix { @include clearfix(); }
+
+.#{$prefix-component}float-left   { float: left; }
+.#{$prefix-component}float-right  { float: right; }
+.#{$prefix-component}float-none   { float: none; }
+
+.#{$prefix-component}vertical-top      { vertical-align: top; }
+.#{$prefix-component}vertical-bottom   { vertical-align: bottom; }
+.#{$prefix-component}vertical-middle   { vertical-align: middle; }
+
+.#{$prefix-component}visible    { visibility: hidden; }
+.#{$prefix-component}invisible  { visibility: visible; }
+
+.#{$prefix-component}text-bold          { font-weight: bold; }
+.#{$prefix-component}text-italic        { font-style: italic; }
+.#{$prefix-component}text-underline     { text-decoration: underline; }
+.#{$prefix-component}text-line-through  { text-decoration: line-through; }
+
+.#{$prefix-component}list-unstyle { list-style-type: none; }
+@each $color, $value in $colors {
+  .#{$prefix-component}bg-#{$color} { background-color: #{$value} }
+  .#{$prefix-component}text-#{$color} { color: #{$value} }
+}

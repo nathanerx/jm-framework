@@ -15,12 +15,27 @@ $success: green;
 $success-dark: darkgreen;
 
 $warning-light: yellow;
-$warning: golden;
+$warning: gold;
 $warning-dark: goldenrod;
 
 $danger-light: tomato;
 $danger: red;
 $danger-dark: darkred;
 
+$info-light: #06DCEE;
+$info: #05A6B3;
+$info-dark: #04575E;
+
 $button-border-width: 1px;
 $button-border-radius: 4px;
+
+$gutter-grid: 16px;
+
+$colors: (
+    'primary': $primary, 
+    'secondary': $secondary, 
+    'success': $success, 
+    'warning': $warning, 
+    'danger': $danger,
+    'info': $info
+);
