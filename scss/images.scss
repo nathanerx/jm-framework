@@ -1,0 +1,6 @@
+@import './variables';
+@import './mixins';
+
+.#{$prefix-component}img-fluid { max-width:100%; }
+.#{$prefix-component}img-border { border:$img-border-width solid $img-border-color; }
+.#{$prefix-component}img-rounded { border-radius:50%; }

@@ -2,6 +2,21 @@ $prefix-component: 'jm-';
 
 $font-base: 8px;
 
+$pagination-border-radius: 4px;
+$pagination-border-width: 1px;
+$pagination-border-color: black;
+$pagination-color: white;
+$pagination-color-hover: black;
+$pagination-bg: #333;
+$pagination-bg-hover: #AAA;
+$pagination-bg-selected: red;
+$pagination-color-selected: white;
+
+$breadcrumb-bg: #AAA;
+$breadcrumb-border-radius: 4px;
+$breadcrumb-color-link: blue;
+$breadcrumb-color: black;
+
 $primary-light: lightblue;
 $primary: blue;
 $primary-dark: midnightblue;
@@ -39,3 +54,6 @@ $colors: (
     'danger': $danger,
     'info': $info
 );
+
+$img-border-width: 1px;
+$img-border-color: black;

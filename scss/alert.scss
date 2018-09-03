@@ -1,0 +1,38 @@
+@import './variables';
+@import './mixins';
+
+.#{$prefix-component}alert {
+    padding: $gutter-grid / 2;
+    margin-bottom: $gutter-grid / 2;
+
+    &-primary {
+        background-color:$primary-light;
+        color:$primary-dark
+    }
+
+    &-secondary {
+        background-color:$secondary-light;
+        color:$secondary-dark;
+    }
+
+    &-warning {
+        background-color:$warning-dark;
+        color:$warning-light;
+    }
+
+    &-success {
+        background-color:$success-light;
+        color:$success-dark;
+    }
+
+    &-danger {
+        background-color:$danger-light;
+        color:$danger-dark;
+    }
+
+    &-info {
+        background-color:$info-light;
+        color:$info-dark;
+    }
+
+}

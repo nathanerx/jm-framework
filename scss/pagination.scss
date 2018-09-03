@@ -1,0 +1,56 @@
+@import './variables';
+@import './mixins';
+
+.#{$prefix-component}pagination {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+
+    &-item {
+        border-width: $pagination-border-width 0 $pagination-border-width $pagination-border-width;
+        border-style: solid;
+        border-color: $pagination-border-color;
+
+        &:first-child {
+            border-top-left-radius :$pagination-border-radius;
+            border-bottom-left-radius: $pagination-border-radius;
+
+            .#{$prefix-component}pagination-link {
+                border-top-left-radius :$pagination-border-radius;
+                border-bottom-left-radius: $pagination-border-radius;
+            }
+        }
+
+        &:last-child {
+            border-top-right-radius: $pagination-border-radius;
+            border-bottom-right-radius: $pagination-border-radius;
+            border-right-width: $pagination-border-width;
+            
+            .#{$prefix-component}pagination-link {
+                border-top-right-radius: $pagination-border-radius;
+                border-bottom-right-radius: $pagination-border-radius;
+            }
+        }
+
+        &.active {
+            .#{$prefix-component}pagination-link {
+                background-color: $pagination-bg-selected;
+                color: $pagination-color-selected;
+                cursor: auto;
+            }
+        }
+    }
+
+    &-link {
+        display: block;
+        padding: 2rem;
+        text-decoration: none;
+        background-color: $pagination-bg;
+        color: $pagination-color;
+        &:hover {
+            background-color :$pagination-bg-hover;
+            color: $pagination-color-hover;
+        }
+    }
+    
+}

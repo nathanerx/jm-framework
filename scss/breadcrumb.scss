@@ -1,0 +1,39 @@
+@import './variables';
+@import './mixins';
+
+.#{$prefix-component}breadcrumb {
+    display: flex;
+    list-style: none;
+    background-color: $breadcrumb-bg;
+    padding: 1rem;
+    border-radius: $breadcrumb-border-radius;
+
+    &-item {
+        padding-left: 1rem;
+        color: $breadcrumb-color;
+
+        &:after {
+            content: "/";
+            padding-left: 1rem;
+        }
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            &:after {
+                content: none;
+            } 
+        }
+    }
+
+    &-link {
+        text-decoration: none;
+        color: $breadcrumb-color-link;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+}
